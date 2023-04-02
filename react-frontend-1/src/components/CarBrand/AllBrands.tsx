@@ -80,13 +80,14 @@ export const AllBrands = () => {
 									<TableCell component="th" scope="row">
 										{index + 1}
 									</TableCell>
-                                    <TableCell align="right">{brand.name}</TableCell>
-                                    <TableCell align="right">{brand.founding_year}</TableCell>
+                                    
 									<TableCell component="th" scope="row">
 										<Link to={`/brands/${brand.id}/details`} title="View brand details">
-											{brand.owner_name}
+											{brand.name}
 										</Link>
 									</TableCell>
+                                    <TableCell align="right">{brand.founding_year}</TableCell>
+									<TableCell align="right">{brand.owner_name}</TableCell>
 									<TableCell align="right">{brand.rarity}</TableCell>
 									<TableCell align="right">{brand.hq_address}</TableCell>
                                     
