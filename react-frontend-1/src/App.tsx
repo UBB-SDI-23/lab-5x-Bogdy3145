@@ -26,7 +26,7 @@ function App() {
 					<Route path="brands/:brandId/details" element={<BrandDetails />} />
 					<Route path="/brands/:brandId/edit" element={<BrandUpdate />} />
 
-					<Route path="/averageprodyear" element={<AverageProdYear/>}></Route>
+					<Route path="/statistic/" element={<AverageProdYear/>}></Route>
           {/*
           <Route path="/owners/:ownerId/edit" element={<OwnerUpdate />} />
 					<Route path="/owners/:ownerId/delete" element={<OwnerDelete />} />
