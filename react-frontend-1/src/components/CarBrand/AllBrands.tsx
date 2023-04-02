@@ -38,7 +38,6 @@ export const AllBrands = () => {
 		axios.get(`${GlobalURL}/brands/`)
 		  .then(response => {
 			console.log(response.data);
-			console.log(typeof response.data);
 			setBrand(response.data);
 			setLoading(false);
 		  })
