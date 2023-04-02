@@ -23,16 +23,17 @@ import axios from "axios";
 
 interface Statistic {
 	id: number;
-	CarBrand: string;
+	name: string;
 	avg_production_year: number;
 	car_count: number;
   }
+
 export const AverageProdYear = () => {
     const [statistics, setStatistics] = useState<Statistic[]>([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
 	setLoading(true);
-	axios.get(`${GlobalURL}/averageprodyear/`)
+	axios.get(`${GlobalURL}/statistic/`)
 	  .then(response => {
 		setStatistics(response.data);
 		setLoading(false);
@@ -67,7 +68,7 @@ export const AverageProdYear = () => {
 				{statistics.map((statistic, index) => (
 					<TableRow key={statistic.id}>
 						<TableCell>{index + 1}</TableCell>
-						<TableCell>{statistic.CarBrand}</TableCell>
+						<TableCell>{statistic.name}</TableCell>
 						<TableCell align="right">{statistic.avg_production_year}</TableCell>
 						<TableCell align="right">{statistic.car_count}</TableCell>
 					</TableRow>
