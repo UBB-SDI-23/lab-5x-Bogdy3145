@@ -31,11 +31,14 @@ const StyledTableRow = styled(TableRow)`
 export const AllBrands = () => {
 	const [loading, setLoading] = useState(false);
 	const [brand, setBrand] = useState<CarBrand[]>([]);
+	
 
 	useEffect(() => {
 		setLoading(true);
 		axios.get(`${GlobalURL}/brands/`)
 		  .then(response => {
+			console.log(response.data);
+			console.log(typeof response.data);
 			setBrand(response.data);
 			setLoading(false);
 		  })
@@ -44,7 +47,6 @@ export const AllBrands = () => {
 			setLoading(false);
 		  });
 	  }, []);
-
 	return (
 		<Container>
 			<h1>All brands</h1>
