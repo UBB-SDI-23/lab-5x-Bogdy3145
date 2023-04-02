@@ -1,3 +1,0 @@
-/brands/* http://ec2-13-50-250-209.eu-north-1.compute.amazonaws.com/brands/:splat 200!
-/averageprodyear/* http://ec2-13-50-250-209.eu-north-1.compute.amazonaws.com/statistic/:splat 200!
-/*    /index.html   200 
