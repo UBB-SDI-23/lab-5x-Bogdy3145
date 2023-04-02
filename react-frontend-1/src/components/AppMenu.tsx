@@ -35,8 +35,8 @@ export const AppMenu = () => {
 						Brands
 					</Button>
 					<Button
-						variant={path.startsWith("/averageprodyear") ? "outlined" : "text"}
-						to="/averageprodyear"
+						variant={path.startsWith("/statistic/") ? "outlined" : "text"}
+						to="/statistic/"
 						component={Link}
 						color="inherit"
 						sx={{ mr: 5 }}	
