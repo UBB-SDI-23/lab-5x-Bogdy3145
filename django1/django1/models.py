@@ -7,6 +7,8 @@ class Brand(models.Model):
     owner_name = models.CharField(max_length=200, default="0", null=True)
     rarity = models.CharField(max_length=200, default="0", null=True)
     hq_address = models.CharField(max_length=200, default="0", null=True)
+    description = models.TextField(default="0", null=True)
+
     # no_of_employees = models.IntegerField(default="0", null=True)
 
     # car = models.CharField(max_length=200, default="-1", null=True)
